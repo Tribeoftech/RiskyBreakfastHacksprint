@@ -55,13 +55,25 @@
   .image-link {
     margin: 0 20px;
   }
+
+  /* New styles for the image box container */
+  .image-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1200px; /* Adjust the max width as needed */
+    padding: 20px;
+    border: 2px solid #ffffff; /* Border color */
+    border-radius: 10px; /* Border radius */
+  }
 </style>
 </head>
 <body>
   <div class="header">
     <h1 class="neon-border">Risky Breakfast</h1>
   </div>
-  <div class="image-container">
+  <div class="image-box"> <!-- Add a container around the images -->
     <a class="image-link" href="image1.html">
       <img src="image1.jpg" alt="Image 1">
     </a>
