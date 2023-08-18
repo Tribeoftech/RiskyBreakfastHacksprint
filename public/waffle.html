@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html>
 <head>
     <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/stylesMain.css">
@@ -65,27 +63,71 @@
             flex: 1;
             text-align: center;
         }
+
+        /* Neon pulse effect for the table */
+        .table-container {
+            margin: 0 auto;
+            width: 95%;
+            max-width: 1100px;
+            border-collapse: collapse;
+            color: white;
+        }
+
+        .table-container th, .table-container td {
+            padding: 20px;
+            text-align: center;
+            background-color: transparent;
+            animation: neon-pulse 1s infinite alternate;
+            text-shadow: 0 0 10px rgba(255, 0, 204, 0.8), 0 0 20px rgba(51, 51, 255, 0.8), 0 0 30px rgba(255, 0, 204, 0.8);
+            border: none;
+        }
+
+        .table-container tr:nth-child(even) {
+            background-color: transparent;
+        }
+
+        .table-container th:first-child, .table-container td:first-child {
+            border-left: none;
+        }
+
+        .table-container th:last-child, .table-container td:last-child {
+            border-right: none;
+        }
+
+        .table-container td {
+            background-color: transparent;
+        }
     </style>
     <title>Neon Text and Table</title>
 </head>
 <body>
     <div class="header">
-        <h1 class="neon-border">waffel</h1>
+        <h1 class="neon-border">waffle</h1>
     </div>
-    <div class="sections-container">
-        <div class="pros-section">
-            <h2>Pros</h2>
-            <!-- Add your pros content here -->
         </div>
-        <div class="cons-section">
-            <h2>Cons</h2>
-            <!-- Add your cons content here -->
-        </div>
+    </div>
+    <table class="table-container">
+        <tr>
+            <th style="font-size: 36px;">Pros</th>
+            <th style="font-size: 36px;">Cons</th>
+        </tr>
+        <tr>
+            <td style="font-size: 36px;">Fluffy waffles: Pillow-like clouds of deliciousness that melt in your mouth.</td>
+            <td style="font-size: 36px;">Waffle stickiness: Sometimes the syrup-to-waffle ratio results in sticky fingers and a syrupy mess.</td>
+        </tr>
+        <tr>
+            <td style="font-size: 36px;">Waffle art: A canvas for creating edible masterpieces with toppings like fruits, chocolate, and sprinkles.</td>
+            <td style="font-size: 36px;">Waffle debates: The eternal question of whether square or round waffles are superior can spark passionate discussions</td>
+        </tr>
+        <!-- Add more rows as needed -->
+    </table>
+    <div class="button-container">
+        <button onclick="startProgressBar()" class="custom-button">Risk-O-Meter</button>
     </div>
     <section class="performance-facts">
     </section>
     <div class="button-container">
-        <button onclick="startProgressBar()">Risk-O-Meter</button>
+        <button onclick="startProgressBar()"></button>
     </div>
     <div class="container">
         <div class="progress-bar"></div>

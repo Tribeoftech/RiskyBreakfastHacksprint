@@ -1,0 +1,22 @@
+.header::before {
+    content: '';
+    position: absolute;
+    top: -70px;
+    left: -710px;
+    width: 1800px;
+    height: 1300px;
+    background-image: url('images/signBoard.png'); /* Replace with the path to your image */
+    background-size: cover;
+    opacity: 1.0; /* Adjust the opacity as needed */
+    z-index: -1;
+    animation: swing 8s ease-in-out infinite;
+}
+
+@keyframes swing {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px); /* Adjust the vertical distance as needed */
+    }
+}

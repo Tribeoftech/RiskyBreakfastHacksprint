@@ -1,100 +1,135 @@
-<!DOCTYPE html>
-<html>
 <head>
-    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/stylesMain.css">
-    <link rel="stylesheet" type="text/css" href="css/halfTextBoxs.css">
-    <style>
-        body {
-            background-image: url('images/background.jpg');
-            background-size: 100%;
-            background-color: rgba(0, 0, 0, 0.9);
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/stylesMain.css">
+  <link rel="stylesheet" type="text/css" href="css/halfTextBoxs.css">
+  <style>
+      body {
+          background-image: url('images/background.jpg');
+          background-size: 100%;
+          background-color: rgba(0, 0, 0, 0.9);
+          margin: 0;
+          padding: 0;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+      }
 
-        .header {
-            text-align: center;
-            padding: 100px 0;
-        }
+      .header {
+          text-align: center;
+          padding: 100px 0;
+      }
 
-        /* Additional styles for the progress bar and button */
-        .container {
-            width: 50%;
-            height: 25px;
-            background-color: #CCC;
-            position: relative;
-            margin: 0 auto;
-        }
+      /* Additional styles for the progress bar and button */
+      .container {
+          width: 50%;
+          height: 25px;
+          background-color: #CCC;
+          position: relative;
+          margin: 0 auto;
+      }
 
-        .container .progress-bar {
-            position: absolute;
-            height: 100%;
-            border-radius: 7px;
-            background-color: rgb(125, 44, 255);
-            width: 0;
-        }
+      .container .progress-bar {
+          position: absolute;
+          height: 100%;
+          border-radius: 7px;
+          background-color: rgb(125, 44, 255);
+          width: 0;
+      }
 
-        #play-animation {
-            animation: progress-bar 5s forwards;
-        } 
+      #play-animation {
+          animation: progress-bar 5s forwards;
+      } 
 
-        @keyframes progress-bar {
-            0% { width: 0; }
-            100% { width: 50%; }
-        }
+      @keyframes progress-bar {
+          0% { width: 0; }
+          100% { width: 50%; }
+      }
 
-        .button-container {
-            text-align: center;
-            margin-top: 20px;
-        }
+      .button-container {
+          text-align: center;
+          margin-top: 20px;
+      }
 
-        /* Styles for the two sections */
-        .sections-container {
-            display: flex;
-            width: 100%;
-            justify-content: space-around;
-            margin-top: 50px;
-        }
+      /* Styles for the two sections */
+      .sections-container {
+          display: flex;
+          width: 100%;
+          justify-content: space-around;
+          margin-top: 50px;
+      }
 
-        .pros-section,
-        .cons-section {
-            flex: 1;
-            text-align: center;
-        }
-    </style>
-    <title>Neon Text and Table</title>
+      .pros-section,
+      .cons-section {
+          flex: 1;
+          text-align: center;
+      }
+
+      /* Neon pulse effect for the table */
+      .table-container {
+          margin: 0 auto;
+          width: 95%;
+          max-width: 1100px;
+          border-collapse: collapse;
+          color: white;
+      }
+
+      .table-container th, .table-container td {
+          padding: 20px;
+          text-align: center;
+          background-color: transparent;
+          animation: neon-pulse 1s infinite alternate;
+          text-shadow: 0 0 10px rgba(255, 0, 204, 0.8), 0 0 20px rgba(51, 51, 255, 0.8), 0 0 30px rgba(255, 0, 204, 0.8);
+          border: none;
+      }
+
+      .table-container tr:nth-child(even) {
+          background-color: transparent;
+      }
+
+      .table-container th:first-child, .table-container td:first-child {
+          border-left: none;
+      }
+
+      .table-container th:last-child, .table-container td:last-child {
+          border-right: none;
+      }
+
+      .table-container td {
+          background-color: transparent;
+      }
+  </style>
+  <title>Neon Text and Table</title>
 </head>
 <body>
-    <div class="header">
-        <h1 class="neon-border">EGGS</h1>
-    </div>
-    <div class="sections-container">
-        <div class="pros-section">
-            <h2>Pros</h2>
-            <!-- Add your pros content here -->
-        </div>
-        <div class="cons-section">
-            <h2>Cons</h2>
-            <!-- Add your cons content here -->
-        </div>
-    </div>
-    <section class="performance-facts">
-    </section>
-    <div class="button-container">
-        <button onclick="startProgressBar()">Risk-O-Meter</button>
-    </div>
-    <div class="container">
-        <div class="progress-bar"></div>
-    </div>
-    <script>
-        function startProgressBar() {
-            const progressBar = document.querySelector('.progress-bar');
-            progressBar.setAttribute('id', 'play-animation');
-        }
-    </script>
+  <div class="header">
+      <h1 class="neon-border">eggs</h1>
+  </div>
+      </div>
+  </div>
+  <table class="table-container">
+      <tr>
+          <th style="font-size: 36px;">Pros</th>
+          <th style="font-size: 36px;">Cons</th>
+      </tr>
+      <tr>
+          <td style="font-size: 36px;">Sunrise on a plate: The vibrant yellow yolk can brighten up even the gloomiest mornings.</td>
+          <td style="font-size: 36px;">Shell showdown: Cracking eggs perfectly every time is a skill that takes some practice, and even then, shell fragments might join the party.</td>
+      </tr>
+      <!-- Add more rows as needed -->
+  </table>
+  <section class="performance-facts">
+  </section>
+  <div class="button-container">
+      <button onclick="startProgressBar()">Risk-O-Meter</button>
+  </div>
+  <div class="container">
+      <div class="progress-bar"></div>
+  </div>
+  <script>
+      function startProgressBar() {
+          const progressBar = document.querySelector('.progress-bar');
+          progressBar.setAttribute('id', 'play-animation');
+      }
+  </script>
 </body>
 </html>
