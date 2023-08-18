@@ -5,11 +5,13 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <style>
         .container {
-            width: 50%; /* Set the width to 50% */
             height: 25px;
             background-color: #CCC;
-            position: relative;
-            margin: 0 auto; /* Center the container */
+            position: fixed;
+            top: 25%; /* Adjust this value to change the position */
+            left: 50%; /* Center horizontally */
+            transform: translate(-50%, 0); /* Center horizontally */
+            z-index: 1; /* Ensure the progress bar is above the content */
         }
 
         .container .progress-bar {
@@ -26,12 +28,7 @@
 
         @keyframes progress-bar {
             0% { width: 0; }
-            100% { width: 50%; } /* Change the width to 50% */
-        }
-
-        .button-container {
-            text-align: center;
-            margin-top: 20px;
+            100% { width: 100%; }
         }
     </style>
 </head>
@@ -69,15 +66,12 @@
             Protein 4
         </p>
     </section>
-
-    <div class="button-container">
-        <button onclick="startProgressBar()">Risk-O-Meter</button>
-    </div>
-
+    
     <div class="container">
         <div class="progress-bar"></div>
     </div>
-
+    <button onclick="startProgressBar()">Risk</button>
+    
     <script>
         function startProgressBar() {
             const progressBar = document.querySelector('.progress-bar');
