@@ -5,11 +5,13 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <style>
         .container {
-            width: 50%; /* Set the width to 50% */
             height: 25px;
             background-color: #CCC;
-            position: relative;
-            margin: 0 auto; /* Center the container */
+            position: fixed;
+            top: 25%; /* Adjust this value to change the position */
+            left: 50%; /* Center horizontally */
+            transform: translate(-50%, 0); /* Center horizontally */
+            z-index: 1; /* Ensure the progress bar is above the content */
         }
 
         .container .progress-bar {
@@ -26,26 +28,57 @@
 
         @keyframes progress-bar {
             0% { width: 0; }
-            100% { width: 50%; } /* Change the width to 50% */
-        }
-
-        .button-container {
-            text-align: center;
-            margin-top: 20px;
+            100% { width: 100%; }
         }
     </style>
 </head>
 <body>
 
+<<<<<<< HEAD
 
     <div class="button-container">
         <button onclick="startProgressBar()">Risk-O-Meter</button>
     </div>
 
+=======
+    <section class="performance-facts">
+        <header class="performance-facts__header">
+            <h1 class="performance-facts__title">Nutrition Facts</h1>
+            <p>Serving Size 1/2 cup (about 82g)</p>
+            <p>Serving Per Container 8</p>
+        </header>
+        <table class="performance-facts__table">
+            <!-- Your table content here -->
+        </table>
+
+        <table class="performance-facts__table--grid">
+            <!-- Your table content here -->
+        </table>
+
+        <p class="small-info">* Percent Daily Values are based on a 2,000 calorie diet. Your daily values may be higher or lower depending on your calorie needs:</p>
+
+        <table class="performance-facts__table--small small-info">
+            <!-- Your table content here -->
+        </table>
+
+        <p class="small-info">
+            Calories per gram:
+        </p>
+        <p class="small-info text-center">
+            Fat 9
+            &bull;
+            Carbohydrate 4
+            &bull;
+            Protein 4
+        </p>
+    </section>
+    
+>>>>>>> c1815eebe3d70308e69ebea51015f3d506e5e789
     <div class="container">
         <div class="progress-bar"></div>
     </div>
-
+    <button onclick="startProgressBar()">Risk</button>
+    
     <script>
         function startProgressBar() {
             const progressBar = document.querySelector('.progress-bar');
