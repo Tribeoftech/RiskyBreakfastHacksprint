@@ -63,7 +63,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 68%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
   border-radius: 3px;
@@ -75,7 +75,25 @@ body {
   /* Place it behind the image */
 }
 
+/* Apply the pulsating animation to the images */
+.image-link img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin: 2px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  /* Apply the pulsating animation */
+  animation: pulse 2s infinite;
+  transform-origin: center bottom; /* Set the transform origin to the bottom center */
+}
 
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
 
 /* New styles for the image box container */
 .image-box {
@@ -84,10 +102,10 @@ body {
   justify-content: center;
   margin: 0 auto;
   max-width: 1200px;
-  padding: 10px;
-  border: 2px solid #ffffff;
+  padding: 100px;
+  border: 0px solid #ffffff;
   border-radius: 0px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.0);
+  box-shadow: 0 0 0px rgba(0, 0, 0, 0);
   background-color: rgba(255, 255, 255, 0.0);
 }
 
