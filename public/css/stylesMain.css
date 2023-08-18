@@ -1,0 +1,106 @@
+/* styles.css */
+
+body {
+  background-image: url('background.jpg');
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.9);
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  text-align: center;
+  padding: 100px 0;
+}
+
+.neon-border {
+  font-size: 7em;
+  font-family: 'Bangers', Arial, sans-serif;
+  color: #ffcc00;
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  border: 5px solid transparent;
+  background: linear-gradient(to right, #ff00cc, #3333ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: neon-pulse 1s infinite alternate;
+  text-shadow: 0 0 10px rgba(255, 0, 204, 0.8), 0 0 20px rgba(51, 51, 255, 0.8), 0 0 30px rgba(255, 0, 204, 0.8);
+  border: 6px solid #ffcc00;
+  transform: perspective(100px) rotateX(10deg);
+  margin: 20px; /* ... (your existing neon-border styles) ... */
+  margin-top: 100px;
+}
+
+@keyframes neon-pulse {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 0, 204, 0.8), 0 0 20px rgba(51, 51, 255, 0.8), 0 0 30px rgba(255, 0, 204, 0.8);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(255, 0, 204, 0.8), 0 0 40px rgba(51, 51, 255, 0.8), 0 0 60px rgba(255, 0, 204, 0.8);
+  }
+  100% {
+    text-shadow: 0 0 10px rgba(255, 0, 204, 0.8), 0 0 20px rgba(51, 51, 255, 0.8), 0 0 30px rgba(255, 0, 204, 0.8);
+  }
+}
+
+.image-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.image-link {
+  margin: 10px;
+  position: relative; /* Add this line */
+}
+
+/* Add this block */
+.image-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
+  border-radius: 3px;
+  z-index: -1; 
+  padding-right: -300px;
+  padding-left: -300px;
+  padding-top: -300px;
+  padding-bottom: -300px;
+  /* Place it behind the image */
+}
+
+
+
+/* New styles for the image box container */
+.image-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 10px;
+  border: 2px solid #ffffff;
+  border-radius: 0px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.0);
+  background-color: rgba(255, 255, 255, 0.0);
+}
+
+/* Additional styles for the images within the container */
+.image-link img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin: 2px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.image {
+  width: 250px;
+  float: center;
+  margin: 20px 20px 20px 20px; /* Adjust the margin values */
+}
