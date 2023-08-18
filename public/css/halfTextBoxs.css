@@ -1,0 +1,21 @@
+/* Add these styles to your existing CSS */
+.sections-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.pros-section,
+.cons-section {
+    width: 50%;
+    text-align: center;
+    padding: 20px;
+}
+
+.pros-section {
+    background-color: rgba(87, 253, 87, 0.2); /* Light green background for pros */
+}
+
+.cons-section {
+    background-color: rgba(255, 84, 84, 0.2); /* Light red background for cons */
+}

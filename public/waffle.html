@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="css/nutrion.css">
     <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/stylesMain.css">
+    <link rel="stylesheet" type="text/css" href="css/halfTextBoxs.css">
     <style>
         body {
             background-image: url('images/background.jpg');
@@ -11,14 +11,15 @@
             background-color: rgba(0, 0, 0, 0.9);
             margin: 0;
             padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .header {
             text-align: center;
             padding: 100px 0;
         }
-
-        /* Rest of your existing CSS styles */
 
         /* Additional styles for the progress bar and button */
         .container {
@@ -37,9 +38,9 @@
             width: 0;
         }
 
-        .progress-animation {
+        #play-animation {
             animation: progress-bar 5s forwards;
-        }
+        } 
 
         @keyframes progress-bar {
             0% { width: 0; }
@@ -50,28 +51,38 @@
             text-align: center;
             margin-top: 20px;
         }
+
+        /* Styles for the two sections */
+        .sections-container {
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+            margin-top: 50px;
+        }
+
+        .pros-section,
+        .cons-section {
+            flex: 1;
+            text-align: center;
+        }
     </style>
     <title>Neon Text and Table</title>
 </head>
 <body>
     <div class="header">
-        <h1 class="neon-border">waffle</h1>
+        <h1 class="neon-border">waffel</h1>
     </div>
-    <table class="table-container">
-        <tr>
-            <th style="font-size: 36px;">Pros</th>
-            <th style="font-size: 36px;">Cons</th>
-        </tr>
-        </tr>
-        <!-- Add more rows as needed -->
-    </table>
+    <div class="sections-container">
+        <div class="pros-section">
+            <h2>Pros</h2>
+            <!-- Add your pros content here -->
+        </div>
+        <div class="cons-section">
+            <h2>Cons</h2>
+            <!-- Add your cons content here -->
+        </div>
+    </div>
     <section class="performance-facts">
-        <header class="performance-facts__header">
-            <h1 class="performance-facts__title">Nutrition Facts</h1>
-            <p>Serving Size 1/2 cup (about 82g)</p>
-            <p>Serving Per Container 8</p>
-        </header>
-        <!-- Rest of the performance-facts section -->
     </section>
     <div class="button-container">
         <button onclick="startProgressBar()">Risk-O-Meter</button>
