@@ -89,6 +89,31 @@
 }
 
 
+@keyframes fireAnimation {
+  0% {
+    background-color: #ed5b5b;
+    box-shadow: 0 0 10px rgba(237, 91, 91, 0.5);
+  }
+  50% {
+    background-color: #ff66cc;
+    box-shadow: 0 0 20px rgba(255, 102, 204, 0.7);
+  }
+  100% {
+    background-color: #ed5b5b;
+    box-shadow: 0 0 10px rgba(237, 91, 91, 0.5);
+  }
+}
+
+.research-button {
+  /* ... (existing styles) ... */
+  animation: fireAnimation 3s infinite;
+}
+
+.research-button:hover {
+  /* ... (existing hover styles) ... */
+  animation: none; /* Remove animation on hover */
+}
+
 </style>
 </head>
 <body>
