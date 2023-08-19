@@ -1,48 +1,92 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="css/nutrion.css">
+    <link rel="stylesheet" type="text/css" href="css/nutrion.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/stylesMain.css">
+    <style>
+        body {
+            background-image: url('images/background.jpg');
+            background-size: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            margin: 0;
+            padding: 0;
+        }
 
-<style>
+        .header {
+            text-align: center;
+            padding: 100px 0;
+        }
 
+        /* Rest of your existing CSS styles */
 
-  /* ... (your existing CSS styles) ... */
+        /* Additional styles for the progress bar and button */
+        .container {
+            width: 50%;
+            height: 25px;
+            background-color: #CCC;
+            position: relative;
+            margin: 0 auto;
+        }
 
-</style>
+        .container .progress-bar {
+            position: absolute;
+            height: 100%;
+            border-radius: 7px;
+            background-color: rgb(125, 44, 255);
+            width: 0;
+        }
+
+        .progress-animation {
+            animation: progress-bar 5s forwards;
+        }
+
+        @keyframes progress-bar {
+            0% { width: 0; }
+            100% { width: 50%; }
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+    <title>Neon Text and Table</title>
 </head>
 <body>
-  <img src="https://s.cdpn.io/3/NutritionFacts.gif" class="image">
-
-  <section class="performance-facts">
-    <header class="performance-facts__header">
-      <h1 class="performance-facts__title">Nutrition Facts</h1>
-      <p>Serving Size 1/2 cup (about 82g)</p>
-      <p>Serving Per Container 8</p>
-    </header>
-    <table class="performance-facts__table">
-      <!-- Your table content here -->
+    <div class="header">
+        <h1 class="neon-border">Bacon</h1>
+    </div>
+    <table class="table-container">
+        <tr>
+            <th style="font-size: 36px;">Pros</th>
+            <th style="font-size: 36px;">Cons</th>
+        </tr>
+        <tr>
+            <td style="font-size: 36px;">There is no taste like the taste of bacon</td>
+            <td style="font-size: 36px;">Bacon has parasites</td>
+        </tr>
+        <!-- Add more rows as needed -->
     </table>
-
-    <table class="performance-facts__table--grid">
-      <!-- Your table content here -->
-    </table>
-
-    <p class="small-info">* Percent Daily Values are based on a 2,000 calorie diet. Your daily values may be higher or lower depending on your calorie needs:</p>
-
-    <table class="performance-facts__table--small small-info">
-      <!-- Your table content here -->
-    </table>
-
-    <p class="small-info">
-      Calories per gram:
-    </p>
-    <p class="small-info text-center">
-      Fat 9
-      &bull;
-      Carbohydrate 4
-      &bull;
-      Protein 4
-    </p>
-  </section>
+    <section class="performance-facts">
+        <header class="performance-facts__header">
+            <h1 class="performance-facts__title">Nutrition Facts</h1>
+            <p>Serving Size 1/2 cup (about 82g)</p>
+            <p>Serving Per Container 8</p>
+        </header>
+        <!-- Rest of the performance-facts section -->
+    </section>
+    <div class="button-container">
+        <button onclick="startProgressBar()">Risk-O-Meter</button>
+    </div>
+    <div class="container">
+        <div class="progress-bar"></div>
+    </div>
+    <script>
+        function startProgressBar() {
+            const progressBar = document.querySelector('.progress-bar');
+            progressBar.setAttribute('id', 'play-animation');
+        }
+    </script>
 </body>
 </html>
