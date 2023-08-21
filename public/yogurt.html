@@ -110,6 +110,12 @@
             animation: neon-pulse 1s infinite alternate;
             text-shadow: 0 0 10px rgba(255, 0, 204, 0), 0 0 20 rgba(51, 51, 255, 0), 0 0 30 rgba(255, 0, 204, 0);
         }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
     
     </style>
     <title>Neon Text and Table</title>
@@ -135,20 +141,17 @@
         <td style="font-size: 36px;">Flavor envy: With so many exciting yogurt flavors available, you might occasionally find yourself in a "fear of missing out" situation.</td>
         </tr>
         </table>
+        <div class="button-container"></div>
         <div class="container">
             <button onclick="startProgressBar()" class="Neon-button">Risk-O-Meter</button>
             <div class="progress-bar"></div>
         </div>
-        <div class="progress-text">50%</div>
-    </div>
     <script>
         function startProgressBar() {
             const progressBar = document.querySelector('.progress-bar');
-            progressBar.style.width = '50%'; // Set the width to 50%
-            
-            const progressText = document.querySelector('.progress-text');
-            progressText.textContent = '50%'; 
+            progressBar.setAttribute('id', 'play-animation');
         }
+        
     </script>
 </body>
 </html>
