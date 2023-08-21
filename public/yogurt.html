@@ -38,7 +38,7 @@
         }
 
         /* Additional styles for the progress bar and button */
-        .container {
+        .container p {
             width: 50%;
             height: 25px;
             background-color: #CCC;
@@ -46,7 +46,7 @@
             margin: 0 auto;
         }
 
-        .container .progress-bar {
+        .progress-bar {
             position: absolute;
             height: 100%;
             border-radius: 7px;
@@ -66,6 +66,7 @@
         .button-container {
             text-align: bottom;
             margin-top: -80px;
+            animation: neon-pulse:1s infinite alternate;
         }
 
         /* Styles for the two sections */
@@ -96,56 +97,7 @@
         .table-container tr:nth-child(even) {
             background-color: transparent;
         }
-        /* Neon pulse effect for the button */
-        /* Additional styles for the progress bar and button */
-      .container {
-          width: 50%;
-          height: 25px;
-          background-color: #CCC;
-          position: relative;
-          margin: 0 auto;
-      }
-  
-      .container .progress-bar {
-          position: absolute;
-          height: 100%;
-          border-radius: 7px;
-          background-color: rgb(125, 44, 255);
-          width: 0;
-      }
-  
-      #play-animation {
-          animation: progress-bar 5s forwards;
-      }
-  
-      @keyframes progress-bar {
-          50% { width: 0; }
-          100% { width: 50%; }
-      }
-  
-      .button-container {
-          text-align: center;
-          margin-top: 20px;
-      }
-  
-      /* Neon pulse effect for the button */
-      .neon-button {
-          font-family: 'Bangers',30px;
-          background-color: transparent;
-          color: rgb(255, 255, 255);
-          border: 2px solid rgb(234, 12, 178);
-          padding: 10 20;
-          border: 10;
-          cursor: pointer;
-          animation: neon-pulse 1 infinite alternate;
-          text-shadow: 0 0 10 rgba(255, 0, 204, 0), 0 0 20 rgba(51, 51, 255, 0), 0 0 30 rgba(255, 0, 204, 0);
-      }
-  
-      @key neon-pulse {
-          0 { opacity: 1; }
-          100 { opacity: 0; }
-      } 
-
+      
     </style>
     <title>Neon Text and Table</title>
 </head>
@@ -173,41 +125,20 @@
         </table>
       
         </div>
-    <div class="progress-bar">
-        <button class="neon-button" onclick="startProgressBar()">Risk-O-Meter</button>
-    </div>
-    <div class="neon-button">
-        <button class="neon-button" onclick="startProgressBar()">Risk-O-Meter</button>
-    </div>
-    <div
-    class="button-container">
-      <button class=".progress-bar()"onclick="start >Risk-O-Meter</button>
+        <div class="container">
+            <div class="progress-bar"></div>
         </div>
-        <div
-        class="progress
-        ></div>
-            </div>
-            
-            <div class="button-container">
-                <button class="neon-button" onclick="startProgressBar>Risk-O-Meter</button>
-            </div>
-            
-            <script
+        <div class="button-container">
+            <button onclick="startProgressBar()" class="custom-button">Risk-O-Meter</button>
+        </div>
+            <script>
         
                 function startProgressBar() {
                     const progressBar = document.querySelector('.progress-bar');
                     progressBar.style.width = '50%';
                     progressBar.setAttribute('id', 'play-animation');
-               
-        </script>
+                </script>
         
-        <script
-    
-                function startProgressBar() {
-                const progressBar = document.querySelector('.progress-bar');
-                progressBar.style.width = '50%';
-                
-                progressBar.setAttribute('id', 'play-animation');
-    </script> 
+            }
 </body>
 </html>
