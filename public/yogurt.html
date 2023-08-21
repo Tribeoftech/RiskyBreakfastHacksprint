@@ -39,12 +39,13 @@
 
         /* Additional styles for the progress bar and button */
         .container {
-            width: 50%;
+            width: 100%; /* Change the width to 100% */
             height: 25px;
             background-color: #CCC;
             position: relative;
             margin: 0 auto;
         }
+         
 
         .container .progress-bar {
             position: absolute;
@@ -113,7 +114,7 @@
     </style>
     <title>Neon Text and Table</title>
 </head>
-<div>
+<body>
     <div class="header">
         <h1 class="neon-border">waffle</h1>
     </div>
@@ -128,23 +129,26 @@
                 <td style="font-size: 36px;">Not suitable for individuals with lactose intolerance</td>
             </tr>
             <tr>
-          </tr>
-          <tr>
-              <td style="font-size: 36px;">Creamy canvas: Yogurt serves as a versatile canvas for adding a dazzling array of toppings, turning each spoonful into a masterpiece.</td>
-              <td style="font-size: 36px;">Flavor envy: With so many exciting yogurt flavors available, you might occasionally find yourself in a "fear of missing out" situation.</td>
-          </tr>
+        </tr>
+        <tr>
+        <td style="font-size: 36px;">Creamy canvas: Yogurt serves as a versatile canvas for adding a dazzling array of toppings, turning each spoonful into a masterpiece.</td>
+        <td style="font-size: 36px;">Flavor envy: With so many exciting yogurt flavors available, you might occasionally find yourself in a "fear of missing out" situation.</td>
+        </tr>
         </table>
-        <div
-        class="container"></div>
-        <div
-        class="progress-bar"></div>
+        <div class="container">
             <button onclick="startProgressBar()" class="Neon-button">Risk-O-Meter</button>
+            <div class="progress-bar"></div>
         </div>
-        <script>
-            function startProgressBar() {
-                const progressBar = document.querySelector('.progress-bar');
-                progressBar.setAttribute('id', 'play-animation');
-            }
-        </script>
-    </body>
-    </html> 
+        <div class="progress-text">50%</div>
+    </div>
+    <script>
+        function startProgressBar() {
+            const progressBar = document.querySelector('.progress-bar');
+            progressBar.style.width = '50%'; // Set the width to 50%
+            
+            const progressText = document.querySelector('.progress-text');
+            progressText.textContent = '50%'; 
+        }
+    </script>
+</body>
+</html>
