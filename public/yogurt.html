@@ -113,7 +113,7 @@
     </style>
     <title>Neon Text and Table</title>
 </head>
-<>
+<div>
     <div class="header">
         <h1 class="neon-border">waffle</h1>
     </div>
@@ -134,6 +134,17 @@
               <td style="font-size: 36px;">Flavor envy: With so many exciting yogurt flavors available, you might occasionally find yourself in a "fear of missing out" situation.</td>
           </tr>
         </table>
-        <div class="container">
-            <div class="progress-bar"></div>
+        <div
+        class="container"></div>
+        <div
+        class="progress-bar"></div>
+            <button onclick="startProgressBar()" class="Neon-button">Risk-O-Meter</button>
         </div>
+        <script>
+            function startProgressBar() {
+                const progressBar = document.querySelector('.progress-bar');
+                progressBar.setAttribute('id', 'play-animation');
+            }
+        </script>
+    </body>
+    </html> 
