@@ -96,7 +96,24 @@
         .table-container tr:nth-child(even) {
             background-color: transparent;
         }
+  /* Neon pulse effect for the button */
+        .neon-button {
+            font-family: 'Bangers', sans-serif;
+            font-size: 24px;
+            background-color: transparent;
+            color: rgb(255, 255, 255);
+            border: 2px solid rgb(234, 12, 178);
+            padding: 10px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            animation: neon-pulse 1s infinite alternate;
+            text-shadow: 0 0 10px rgba(255, 0, 204, 0.8), 0 0 20px rgba(51, 51, 255, 0.8), 0 0 30px rgba(255, 0, 204, 0.8);
+}
 
+            @keyframes neon-pulse {
+            0% { opacity: 1; }
+            100% { opacity: 0.7; }
+}
     </style>
     <title>Neon Text and Table</title>
 </head>
@@ -122,15 +139,15 @@
           </tr>
             <!-- Add more rows as needed -->
         </table>
-        <div class="button-container">
-            <button onclick="startProgressBar()" class="custom-button">Risk-O-Meter</button>
-        </div>
         <section class="performance-facts">
             <!-- Additional content for performance-facts section -->
         </section>
-        <div class="container">
+        <div class="button-container">
             <div class="progress-bar"></div>
         </div>
+    </div>
+    <div class="button-container">
+        <button class="neon-button" onclick="startProgressBar()">Risk-O-Meter</button>
     </div>
     <script>
         function startProgressBar() {
