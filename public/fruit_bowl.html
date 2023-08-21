@@ -66,6 +66,26 @@
         .button-container {
             text-align: center;
             margin-top: -100px;
+        }
+
+        /* Styles for the two sections */
+        .sections-container {
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+            margin-top: 50px;
+        }
+        
+        /* Neon pulse effect for the table */
+        .table-container {
+            margin: 0 auto;
+            width: 95%;
+            max-width: 1100px;
+            border-collapse: collapse;
+            color: white;
+        }
+        /* Neon button styles */
+        .neon-button {
             background-color: transparent;
             border: 2px solid #00ffcc; /* Neon green border color */
             color: #00ffcc; /* Neon green text color */
@@ -77,21 +97,11 @@
             transition: background-color 0.3s, color 0.3s;
         }
 
-        /* Styles for the two sections */
-        .sections-container {
-            display: flex;
-            width: 100%;
-            justify-content: space-around;
-            margin-top: 50px;
+        .neon-button:hover {
+        background-color: #00ffcc; /* Neon green background color on hover */
+        color: #000; /* Black text color on hover */
         }
-        /* Neon pulse effect for the table */
-        .table-container {
-            margin: 0 auto;
-            width: 95%;
-            max-width: 1100px;
-            border-collapse: collapse;
-            color: white;
-        }
+
 
         .table-container th, .table-container td {
             padding: 20px;
@@ -111,7 +121,7 @@
 </head>
 <body>
     <div class="header">
-        <h1 class="neon-border">fruits</h1>
+        <h1 class="neon-border">Fruit Bowl</h1>
     </div>
     <div class="section-background">
         <table class="table-container">
@@ -133,7 +143,7 @@
             <!-- Add more rows as needed -->
         </table>
         <div class="button-container">
-            <button onclick="startProgressBar()" class="custom-button">Risk-O-Meter</button>
+            <button onclick="startProgressBar()" class="custom-button neon-button">Risk-O-Meter</button>
         </div>
         <section class="performance-facts">
             <!-- Additional content for performance-facts section -->
