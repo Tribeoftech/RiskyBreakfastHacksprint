@@ -42,7 +42,7 @@
             width: 100%; /* Change the width to 100% */
             height: 25px;
             background-color: #CCC;
-            position: relative;
+            position: column;
             margin: 0 auto;
         }
          
@@ -62,13 +62,6 @@
         @keyframes progress-bar {
             0% { width: 0; }
             100% { width: 50%; }
-        }
-
-        .button-container {
-            text-align: center;
-            margin-top: -100px;
-            width: 50%;
-            height: 50%;
         }
 
         /* Styles for the two sections */
@@ -109,12 +102,18 @@
             cursor: pointer;
             animation: neon-pulse 1s infinite alternate;
             text-shadow: 0 0 10px rgba(255, 0, 204, 0), 0 0 20 rgba(51, 51, 255, 0), 0 0 30 rgba(255, 0, 204, 0);
+            margin-bottom: 10px; 
         }
         .button-container {
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-direction: column; /* Add this line */
+            margin-top: 20px; 
         }
+        /* ... Your existing CSS code ... */
+/* ... Your existing CSS code ... */
+
         
     
     </style>
@@ -141,17 +140,21 @@
         <td style="font-size: 36px;">Flavor envy: With so many exciting yogurt flavors available, you might occasionally find yourself in a "fear of missing out" situation.</td>
         </tr>
         </table>
-        <div class="button-container"></div>
+        <div class="button-container">
+            <button onclick="startProgressBar()" class="custom-button">Risk-O-Meter</button>
+        </div>
+        <section class="performance-facts">
+            <!-- Additional content for performance-facts section -->
+        </section>
         <div class="container">
-            <button onclick="startProgressBar()" class="Neon-button">Risk-O-Meter</button>
             <div class="progress-bar"></div>
         </div>
+    </div>
     <script>
         function startProgressBar() {
             const progressBar = document.querySelector('.progress-bar');
             progressBar.setAttribute('id', 'play-animation');
         }
-        
     </script>
 </body>
 </html>
