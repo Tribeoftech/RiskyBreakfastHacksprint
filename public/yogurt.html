@@ -67,7 +67,7 @@
             text-align: center;
             margin-top: -100px;
             width: 50%;
-            height: 50px;
+            height: 50%;
         }
 
         /* Styles for the two sections */
@@ -101,7 +101,7 @@
         .Neon-button {
             font-family: 'Bangers';
             font: 30;
-            background: solid rgb(234, 12, 178);
+            background: transparent;
             color: rgb(255, 255, 255);
             border: 2px solid rgb(234, 12, 178);
             padding: 10px 20px;
@@ -113,7 +113,7 @@
     </style>
     <title>Neon Text and Table</title>
 </head>
-<body>
+<>
     <div class="header">
         <h1 class="neon-border">waffle</h1>
     </div>
@@ -135,9 +135,10 @@
           </tr>
         </table>
     </div>
-    <div class="Neon-button">
-    <button onclick="startProgressBar()" class="Neon-button">Risk-O-Meter</button>
+    <div>
+        <button onclick="startProgressBar()" class="Neon-button">Risk-O-Meter</button>
     </div>
+    </body>
     <script>
         function startProgressBar() {
             const progressBar = document.querySelector('.progress-bar');
