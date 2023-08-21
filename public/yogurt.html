@@ -98,7 +98,7 @@
         }
   /* Neon pulse effect for the button */
       /* Additional styles for the progress bar and button */
-      .container {
+    .container {
         width: 50%;
         height: 25px;
         background-color: #CCC;
@@ -116,10 +116,10 @@
 
     #play-animation {
         animation: progress-bar 5s forwards;
-    } 
+    }
 
     @keyframes progress-bar {
-        0% { width: 0; }
+        50% { width: 0; }
         100% { width: 50%; }
     }
 
@@ -175,16 +175,15 @@ font-size: 30px;
         <section class="performance-facts">
             <!-- Additional content for performance-facts section -->
         </section>
-        <div class="button-container">
-            <div class="progress-bar"></div>
         </div>
-    </div>
-    <div class="button-container">
+    <div class="neon-container">
         <button class="neon-button" onclick="startProgressBar()">Risk-O-Meter</button>
     </div>
     <script>
         function startProgressBar() {
             const progressBar = document.querySelector('.progress-bar');
+            progressBar.style.width = '50%';
+            
             progressBar.setAttribute('id', 'play-animation');
         }
     </script>
