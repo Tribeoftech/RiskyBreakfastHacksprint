@@ -1,7 +1,11 @@
+<!DOCTYPE html>
+<html>
 <head>
     <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/stylesMain.css">
     <link rel="stylesheet" type="text/css" href="css/halfTextBoxs.css">
+    <link rel="stylesheet" type="text/css" href="css/space.css">
+    <link rel="stylesheet" type="text/css" href="css/swing.css">
     <style>
         body {
             background-image: url('images/background.jpg');
@@ -17,6 +21,20 @@
         .header {
             text-align: center;
             padding: 100px 0;
+            position: relative; /* Add this line */
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -110px;
+            left: -710px;
+            width: 1800px;
+            height: 1300px;
+            background-image: url('images/signBoard.png'); /* Replace with the path to your image */
+            background-size: cover;
+            opacity: 1.0; /* Adjust the opacity as needed */
+            z-index: -1;
         }
 
         /* Additional styles for the progress bar and button */
@@ -47,7 +65,7 @@
 
         .button-container {
             text-align: center;
-            margin-top: 20px;
+            margin-top: -100px;
         }
 
         /* Styles for the two sections */
@@ -57,13 +75,6 @@
             justify-content: space-around;
             margin-top: 50px;
         }
-
-        .pros-section,
-        .cons-section {
-            flex: 1;
-            text-align: center;
-        }
-
         /* Neon pulse effect for the table */
         .table-container {
             margin: 0 auto;
@@ -86,17 +97,6 @@
             background-color: transparent;
         }
 
-        .table-container th:first-child, .table-container td:first-child {
-            border-left: none;
-        }
-
-        .table-container th:last-child, .table-container td:last-child {
-            border-right: none;
-        }
-
-        .table-container td {
-            background-color: transparent;
-        }
     </style>
     <title>Neon Text and Table</title>
 </head>
@@ -104,33 +104,33 @@
     <div class="header">
         <h1 class="neon-border">waffle</h1>
     </div>
+    <div class="section-background">
+        <table class="table-container">
+            <tr>
+                <th style="font-size: 36px;">Pros</th>
+                <th style="font-size: 36px;">Cons</th>
+            </tr>
+            <tr>
+                <td style="font-size: 36px;">Fluffy waffles: Pillow-like clouds of deliciousness that melt in your mouth.</td>
+                <td style="font-size: 36px;">Waffle stickiness: Sometimes the syrup-to-waffle ratio results in sticky fingers and a syrupy mess.</td>
+            </tr>
+            <tr>
+          </tr>
+          <tr>
+              <td style="font-size: 36px;">Waffle art: A canvas for creating edible masterpieces with toppings like fruits, chocolate, and sprinkles.</td>
+              <td style="font-size: 36px;">Waffle debates: The eternal question of whether square or round waffles are superior can spark passionate discussions</td>
+          </tr>
+            <!-- Add more rows as needed -->
+        </table>
+        <div class="button-container">
+            <button onclick="startProgressBar()" class="custom-button">Risk-O-Meter</button>
         </div>
-    </div>
-    <table class="table-container">
-        <tr>
-            <th style="font-size: 36px;">Pros</th>
-            <th style="font-size: 36px;">Cons</th>
-        </tr>
-        <tr>
-            <td style="font-size: 36px;">Fluffy waffles: Pillow-like clouds of deliciousness that melt in your mouth.</td>
-            <td style="font-size: 36px;">Waffle stickiness: Sometimes the syrup-to-waffle ratio results in sticky fingers and a syrupy mess.</td>
-        </tr>
-        <tr>
-            <td style="font-size: 36px;">Waffle art: A canvas for creating edible masterpieces with toppings like fruits, chocolate, and sprinkles.</td>
-            <td style="font-size: 36px;">Waffle debates: The eternal question of whether square or round waffles are superior can spark passionate discussions</td>
-        </tr>
-        <!-- Add more rows as needed -->
-    </table>
-    <div class="button-container">
-        <button onclick="startProgressBar()" class="custom-button">Risk-O-Meter</button>
-    </div>
-    <section class="performance-facts">
-    </section>
-    <div class="button-container">
-        <button onclick="startProgressBar()"></button>
-    </div>
-    <div class="container">
-        <div class="progress-bar"></div>
+        <section class="performance-facts">
+            <!-- Additional content for performance-facts section -->
+        </section>
+        <div class="container">
+            <div class="progress-bar"></div>
+        </div>
     </div>
     <script>
         function startProgressBar() {
