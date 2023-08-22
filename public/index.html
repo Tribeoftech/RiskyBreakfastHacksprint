@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/stylesMain.css">
+<style>
+  body {
+    background-image: url('images/background.jpg'); /* Replace with the path to your background image */
+    background-size: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Adjust opacity by changing the last value (0.5 in this case) */
+    margin: 0;
+    padding: 0;
+  }
+
+  .header {
+    text-align: center;
+    padding: 100px 0;
+  }
+
+  @keyframes neon-pulse {
+    /* Your animation styles here */
+  }
+
+  .image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: -50px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 100px;
+  }
+
+  .image-link {
+    width: calc(33.33% - 30px); /* Distribute width evenly with margin between images */
+    margin: 15px; /* Add margin between images */
+  }
+
+  .image-link img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 3.0);
+  }
+
+  /* CSS for styling the large button */
+  .image-bacon {
+      display: inline-block;
+      width: 10px; /* Adjust the width as needed */
+      height: 10px; /* Set the same height as the width for a square button */
+      padding: 10px;
+      background-color: #f0f0f0;
+      border: 2 solid #333;
+      border-radius: 10px;
+      text-align: center;
+      text-decoration: none;
+      color: #ed5b5b;
+      font-weight: bold;
+      overflow: hidden; 
+  }
+
+  .image-bacon:hover {
+      background-color: #ddd;
+  }
+
+  .image img {
+      max-width: 100%;
+      max-height: 100%;
+  }
+.button-container {
+  text-align: center; /* Center-align the button */
+  margin-top: 20px; /* Add margin space above the button */
+}
+
+.research-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ed5b5b;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.research-button:hover {
+  background-color: #d94343;
+}
+
+
+@keyframes fireAnimation {
+  0% {
+    background-color: #ed5b5b;
+    box-shadow: 0 0 10px rgba(237, 91, 91, 0.5);
+  }
+  50% {
+    background-color: #ff66cc;
+    box-shadow: 0 0 20px rgba(255, 102, 204, 0.7);
+  }
+  100% {
+    background-color: #ed5b5b;
+    box-shadow: 0 0 10px rgba(237, 91, 91, 0.5);
+  }
+}
+
+.research-button {
+  /* ... (existing styles) ... */
+  animation: fireAnimation 3s infinite;
+}
+
+.research-button:hover {
+  /* ... (existing hover styles) ... */
+  animation: none; /* Remove animation on hover */
+}
+
+</style>
+</head>
+<body>
+  <div class="header">
+    <h1 class="neon-border">Risky Breakfast</h1>
+  </div>
+  <div class="image-container">
+    <a class="image-link" href="yogurt.html">
+      <img src="images/yogurt_image.png" alt="Image 1">
+    </a>
+    <a class="image-link" href="fruit_bowl.html">
+      <img src="images/fruit_bowl.png" alt="Image 2">
+    </a>
+    <a class="image-link" href="waffle.html">
+      <img src="images/waffle.png" alt="Image 3">
+    </a>
+    <a class="image-link" href="coffee.html">
+      <img src="images/coffee_image.png" alt="Image 4">
+    </a>
+    <a class="image-link" href="bacon.html">
+      <img src="images/bacon_image.png" alt="Image 5">
+    </a>
+    <a class="image-link" href="newegg.html">
+      <img src="images/newegg.png" alt="Image 6">
+    </a>
+    <a class="image-link" href="milk.html">
+      <img src="images/milk_image.png" alt="Image 7">
+    </a>
+    <a class="image-link" href="fruit_bowl.html">
+      <img src="images/fruit_bowl.png" alt="Image 8">
+    </a>
+    <a class="image-link" href="waffle.html">
+      <img src="images/waffle.png" alt="Image 9">
+    </a>
+  </div>
+
+<div class="button-container">
+  <a class="research-button" href="research_team.html">Research Team</a>
+</div>
+<script src=“https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js”></script>
+  <script src=“https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js”></script>
+</body>
+</html>

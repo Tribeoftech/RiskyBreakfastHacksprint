@@ -6,15 +6,26 @@ const app = express();
 const PORT = 3000;
 
 // Your Firebase configuration
+// Import the functions you need from the SDKs you need
+
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyDI_zryNHSv777FF8gqIaf9p8yv21RQTLo",
-  authDomain: "risky-breakfast-f2f35.firebaseapp.com",
-  projectId: "risky-breakfast-f2f35",
-  storageBucket: "risky-breakfast-f2f35.appspot.com",
-  messagingSenderId: "542307173680",
-  appId: "1:542307173680:web:8b90eaf7dbd1e8ed3c74f5",
-  measurementId: "G-XXYWSDT91T"
+  apiKey: "AIzaSyAgul610ygce5HUmQiwD5HhVt1heOY5H2I",
+  authDomain: "riskybreakfast-bd4b3.firebaseapp.com",
+  projectId: "riskybreakfast-bd4b3",
+  storageBucket: "riskybreakfast-bd4b3.appspot.com",
+  messagingSenderId: "744181553247",
+  appId: "1:744181553247:web:a02969ca3e1567b635a3ea",
+  measurementId: "G-W1GB9L3D42"
 };
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
 
 // Initialize Firebase
 const firebaseApp = initializeApp(firebaseConfig);
