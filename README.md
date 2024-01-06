@@ -8,6 +8,7 @@ Chris Diggs
 DESCRIPTION
 A visually pleasing breakfast webpage based on real data collected throughout the duration of the project time frame. Together we collected data with realistic pros and cons based on breakfast items we consumed. 
 
+Javascrip-HTML-CSS were all utilized in the making of this first hacksprint. It challenged us and we loved it.
 
 
 
